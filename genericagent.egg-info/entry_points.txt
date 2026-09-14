@@ -1,0 +1,2 @@
+[console_scripts]
+ga = ga_cli.cli:main

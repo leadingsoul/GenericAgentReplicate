@@ -1,0 +1,10 @@
+pyproject.toml
+ga_cli/__init__.py
+ga_cli/__main__.py
+ga_cli/cli.py
+genericagent.egg-info/PKG-INFO
+genericagent.egg-info/SOURCES.txt
+genericagent.egg-info/dependency_links.txt
+genericagent.egg-info/entry_points.txt
+genericagent.egg-info/requires.txt
+genericagent.egg-info/top_level.txt
