@@ -142,7 +142,7 @@ def agent_runner_loop(client, system_prompt, user_input, handler, tools_schema,
     Returns:
         退出原因字典，包含result和data字段
     """
-    message = [
+    messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": initial_user_content if initial_user_content is not None else user_input}
     ]
@@ -162,7 +162,7 @@ def agent_runner_loop(client, system_prompt, user_input, handler, tools_schema,
         _hook('turn_before', locals())
         _hook('llm_before', locals())
         # 调用LLM获取响应
-        response_gen = client.chat(message = messages, tools=tools_schema)
+        response_gen = client.chat(messages = messages, tools=tools_schema)
         if verbose:
             response = yield from response_gen
             yield '\n\n'
